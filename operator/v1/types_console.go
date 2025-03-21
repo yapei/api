@@ -61,6 +61,10 @@ type ConsoleSpec struct {
 	// where access to routes is not possible.
 	// +optional
 	Ingress Ingress `json:"ingress"`
+	// testcustom is a test field
+	//+kubebuilder:validation:Enum:="testOCP";"testOKD";
+	// +kubebuilder:validation:Required
+	Testcustom string `json:"testcustom"`
 }
 
 // ConsoleConfigRoute holds information on external route access to console.
